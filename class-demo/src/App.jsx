@@ -31,6 +31,15 @@ export const App = () => {
     setStudents(filteredStudents);
   };
 
+  const handleUpdateStudent = (id, attendance) => {
+    // update the attendace (t/f) for the student with that id
+    setStudents((currentStudents) => {
+      return currentStudents.map((s) =>
+        s.id === id ? { ...s, attendance: attendance } : s
+      );
+    });
+  };
+
   return (
     <Stack spacing={5}>
       <Banner />
@@ -43,6 +52,7 @@ export const App = () => {
             <Students
               students={students}
               handleDeleteStudent={handleDeleteStudent}
+              handleUpdateStudent={handleUpdateStudent}
             />
           )}
         </Grid>
