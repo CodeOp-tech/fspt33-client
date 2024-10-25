@@ -1,0 +1,29 @@
+.list-item {
+  margin: 0.5em;
+  padding: 0.5em 1em;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: lightgray;
+}
+
+.delete-button button {
+  margin: 0.6em;
+  background-color: rgb(255, 175, 175);
+  color: rgb(195, 43, 43);
+  font-weight: bold;
+}
+
+.delete-button button:hover {
+  border-color: red;
+}
+
+input[type="checkbox"] {
+  transform: scale(2);
+}
